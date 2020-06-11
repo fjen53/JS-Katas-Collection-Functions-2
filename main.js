@@ -25,15 +25,19 @@ function power(x, n) {
 }
 console.log(power(4, 5))
 
-//kata 4
+// //kata 4
 function factorial(n) {
-    let result = 1
-    for (let count = 1; count <= n; count++) {
-        result = multiply(result, n)
+    let result = 1;
+    if (n == 0 || n == 1) {
+        return result;
+    } else {
+        for (let count = n; count >= 1; count--) {
+            result = multiply(result, count);
+        }
+        return result;
     }
-    return result
 }
-console.log(factorial(4))
+console.log(factorial(5))
 
 // kata 5
 function fibonacci(n) {
@@ -44,9 +48,10 @@ function fibonacci(n) {
         c = a + b;
         a = b;
         b = c;
-        result = add(result, n)
+        result = add(result, count)
     }
     return result;
 }
 console.log(fibonacci(8))
+
 
