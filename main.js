@@ -19,34 +19,34 @@ console.log(multiply(12, 5))
 function power(x, n) {
     let result = 1
     for (let count = 0; count < n; count++) {
-        result *= x;
+        result = multiply(result, x);
     }
     return result
 }
-console.log(power(4, 3))
+console.log(power(4, 5))
 
 //kata 4
 function factorial(n) {
-    let result = 0
-    for (let count = 0; count >= n; count--) {
-        result = power(result, n)
+    let result = 1
+    for (let count = 1; count <= n; count++) {
+        result = multiply(result, n)
     }
     return result
 }
-console.log(factorial(8))
+console.log(factorial(4))
 
 // kata 5
 function fibonacci(n) {
+    let result = 1
     let a = 0, b = 1, c = 1;
 
-    for (let count = 2; count <= n; count++) {
+    for (let count = 1; count <= n; count++) {
         c = a + b;
         a = b;
         b = c;
-        result = factorial(b)
+        result = add(result, n)
     }
     return result;
 }
 console.log(fibonacci(8))
-
 
