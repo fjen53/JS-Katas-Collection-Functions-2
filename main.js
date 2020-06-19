@@ -41,16 +41,14 @@ console.log(factorial(5))
 
 // kata 5
 function fibonacci(n) {
-    let result = 1
-    let a = 0, b = 1, c = 1;
-
-    for (let count = 1; count <= n; count++) {
-        c = a + b;
+    let a = 1, b = 1, c = 1;
+    for (let count = 3; count <= n; count++) {
+        // c = a, b;
         a = b;
         b = c;
-        result = add(result, count)
+        c = add(a, b)
     }
-    return result;
+    return b;
 }
 console.log(fibonacci(8))
 
